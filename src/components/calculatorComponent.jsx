@@ -2,10 +2,11 @@ import React, { Component } from "react";
 
 class Calculator extends Component {
   state = {
-    number: 0
+    number: "0"
   };
 
-  updateNumber = valueUpdate => this.setState({ number: valueUpdate });
+  updateNumber = valueUpdate =>
+    this.setState({ number: this.state.number.concat(valueUpdate) });
 
   render() {
     return (
@@ -21,6 +22,7 @@ class Calculator extends Component {
         <Button onClickFunction={this.updateNumber} userInput={8} />
         <Button onClickFunction={this.updateNumber} userInput={9} />
         <Button onClickFunction={this.updateNumber} userInput={0} />
+        <Button onClickFunction={this.updateNumber} userInput={`+`} />
         <Button onClickFunction={this.updateNumber} userInput={`=`} />
       </div>
     );
