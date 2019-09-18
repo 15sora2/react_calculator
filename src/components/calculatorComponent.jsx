@@ -5,23 +5,38 @@ class Calculator extends Component {
     number: 0
   };
 
+  updateNumber = valueUpdate => this.setState({ number: valueUpdate });
+
   render() {
     return (
       <div>
-        <span>{this.state.number}</span>
-        <button onClick={() => this.setState({ number: 1 })}>1</button>
-        <button onClick={() => this.setState({ number: 2 })}>2</button>
-        <button onClick={() => this.setState({ number: 3 })}>3</button>
-        <button onClick={() => this.setState({ number: 4 })}>4</button>
-        <button onClick={() => this.setState({ number: 5 })}>5</button>
-        <button onClick={() => this.setState({ number: 6 })}>6</button>
-        <button onClick={() => this.setState({ number: 7 })}>7</button>
-        <button onClick={() => this.setState({ number: 8 })}>8</button>
-        <button onClick={() => this.setState({ number: 9 })}>9</button>
-        <button onClick={() => this.setState({ number: 0 })}>0</button>
-        <button>=</button>
+        <Display number={this.state.number} />
+        <Button onClickFunction={this.updateNumber} userInput={1} />
+        <Button onClickFunction={this.updateNumber} userInput={2} />
+        <Button onClickFunction={this.updateNumber} userInput={3} />
+        <Button onClickFunction={this.updateNumber} userInput={4} />
+        <Button onClickFunction={this.updateNumber} userInput={5} />
+        <Button onClickFunction={this.updateNumber} userInput={6} />
+        <Button onClickFunction={this.updateNumber} userInput={7} />
+        <Button onClickFunction={this.updateNumber} userInput={8} />
+        <Button onClickFunction={this.updateNumber} userInput={9} />
+        <Button onClickFunction={this.updateNumber} userInput={0} />
+        <Button onClickFunction={this.updateNumber} userInput={`=`} />
       </div>
     );
+  }
+}
+
+class Button extends Component {
+  handleClick = () => this.props.onClickFunction(this.props.userInput);
+  render() {
+    return <button onClick={this.handleClick}>{this.props.userInput}</button>;
+  }
+}
+
+class Display extends Component {
+  render() {
+    return <h1>{this.props.number}</h1>;
   }
 }
 
