@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.calc-button  {
+  background: rgba(0, 0, 0, 0.5); /* light background with opacity 50% */
+  border: 1px solid #111; /* black border */
+  padding: 20px;
+  color: #EEE; /* white text */
+  border-radius: 5px; /* rounded corners */
+  font-size: 22px; /* larger fonts */
+  cursor: pointer; /* make it look clickable */
+}
