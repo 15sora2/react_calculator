@@ -18,7 +18,7 @@ class Calculator extends Component {
       <div className="col-6 col-sm-3">
         <Display number={this.state.number} />
         <Button
-          class="calc-button"
+          variant="btn btn-info"
           onClickFunction={this.updateNumber}
           userInput={1}
         />
@@ -27,21 +27,82 @@ class Calculator extends Component {
           onClickFunction={this.updateNumber}
           userInput={2}
         />
-        <Button onClickFunction={this.updateNumber} userInput={3} />
-        <Button onClickFunction={this.updateNumber} userInput={4} />
-        <Button onClickFunction={this.updateNumber} userInput={5} />
-        <Button onClickFunction={this.updateNumber} userInput={6} />
-        <Button onClickFunction={this.updateNumber} userInput={7} />
-        <Button onClickFunction={this.updateNumber} userInput={8} />
-        <Button onClickFunction={this.updateNumber} userInput={9} />
-        <Button onClickFunction={this.updateNumber} userInput={0} />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={3}
+        />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={4}
+        />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={5}
+        />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={6}
+        />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={7}
+        />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={8}
+        />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={9}
+        />
+        <Button
+          variant="btn btn-info"
+          onClickFunction={this.updateNumber}
+          userInput={0}
+        />
 
-        <Button onClickFunction={this.updateNumber} userInput={`+`} />
-        <Button onClickFunction={this.updateNumber} userInput={`-`} />
-        <Button onClickFunction={this.updateNumber} userInput={`*`} />
-        <Button onClickFunction={this.updateNumber} userInput={`/`} />
-        <Button onClickFunction={this.doMath} userInput={`=`} />
-        <Button onClickFunction={this.clearDisplay} userInput={`C`} />
+        <Button
+          variant="btn btn-secondary"
+          onClickFunction={this.updateNumber}
+          userInput={`+`}
+        />
+        <Button
+          variant="btn btn-secondary"
+          onClickFunction={this.updateNumber}
+          userInput={`-`}
+        />
+        <Button
+          variant="btn btn-secondary"
+          onClickFunction={this.updateNumber}
+          userInput={`*`}
+        />
+        <Button
+          variant="btn btn-secondary"
+          onClickFunction={this.updateNumber}
+          userInput={`/`}
+        />
+        <Button
+          variant="btn btn-secondary"
+          onClickFunction={this.doMath}
+          userInput={`=`}
+        />
+        <Button
+          variant="btn btn-secondary"
+          onClickFunction={this.clearDisplay}
+          userInput={`.`}
+        />
+        <Button
+          variant="btn btn-secondary"
+          onClickFunction={this.clearDisplay}
+          userInput={`C`}
+        />
       </div>
     );
   }
